@@ -7,6 +7,7 @@ Game::Game() :
     physics(new Physics()), 
     graphics(new Graphics())
 {
+    window->setFramerateLimit(60);
 }
 
 Game::~Game()
