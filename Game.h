@@ -2,10 +2,10 @@
 
 #include <SFML/Graphics.hpp>
 
-#include "Input.h"
-#include "Ai.h"
-#include "Physics.h"
-#include "Graphics.h"
+#include "Component/Input.h"
+#include "Component/Ai.h"
+#include "Component/Physics.h"
+#include "Component/Graphics.h"
 
 using sf::RenderWindow;
 using sf::VideoMode;
