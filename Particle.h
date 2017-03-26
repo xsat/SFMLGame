@@ -21,8 +21,8 @@ public:
     Particle(const String &filename, const IntRect &area = IntRect());
     ~Particle();
 private:
+    virtual void draw(RenderTarget &target, RenderStates states) const;
+
     Texture *texture;
     Sprite *sprite;
-
-    virtual void draw(RenderTarget &target, RenderStates states) const;
 };
