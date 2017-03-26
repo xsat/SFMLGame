@@ -19,7 +19,7 @@ class Particle : public Drawable
 {
 public:
     Particle(const String &filename, const IntRect &area = IntRect());
-    ~Particle();
+    virtual ~Particle();
 private:
     virtual void draw(RenderTarget &target, RenderStates states) const;
 
