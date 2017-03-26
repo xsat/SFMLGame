@@ -11,6 +11,8 @@ Particle::Particle(const String &filename, const IntRect &area) : Drawable(),
 
 Particle::~Particle()
 {
+    delete sprite;
+    delete texture;
 }
 
 void Particle::draw(RenderTarget &target, RenderStates states) const

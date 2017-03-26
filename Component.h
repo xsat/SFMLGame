@@ -1,10 +1,6 @@
 #pragma once
 
-#include <memory>
-
 #include <SFML/Graphics.hpp>
-
-using std::shared_ptr;
 
 using sf::RenderWindow;
 

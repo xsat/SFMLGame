@@ -11,7 +11,6 @@ Graphics::~Graphics()
 
 void Graphics::update(RenderWindow *window)
 {
-    
     window->clear();
     window->draw(*test);
     window->display();
