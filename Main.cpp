@@ -1,3 +1,5 @@
+#include <memory>
+
 #include "Game.h"
 
 int main() {
