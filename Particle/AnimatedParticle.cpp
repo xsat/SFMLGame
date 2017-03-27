@@ -7,7 +7,6 @@ AnimatedParticle::AnimatedParticle(const String &filename, const IntRect &area)
 
 AnimatedParticle::~AnimatedParticle()
 {
-
 }
 
 void AnimatedParticle::addFrame(const IntRect &frame)
