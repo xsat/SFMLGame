@@ -20,6 +20,9 @@ class Particle : public Drawable
 public:
     Particle(const String &filename, const IntRect &area = IntRect());
     virtual ~Particle();
+protected:
+    Texture *getTexture();
+    Sprite *getSprite();
 private:
     virtual void draw(RenderTarget &target, RenderStates states) const;
 

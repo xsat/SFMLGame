@@ -1,15 +1,15 @@
 #include "AnimatedParticle.h"
 
-AnimatedParticle::AnimatedParticle(const String &filename, const IntRect &area) 
-    : Particle(filename, area), frames()
+AnimatedParticle::AnimatedParticle(const String &filename) : Particle(filename)
 {
 }
 
 AnimatedParticle::~AnimatedParticle()
 {
+
 }
 
-void AnimatedParticle::addFrame(const IntRect &frame)
+void AnimatedParticle::update()
 {
-    frames.emplace_back(frame);
+
 }

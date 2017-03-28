@@ -1,46 +1,43 @@
 #include "Animation.h"
 
-Animation::Animation(const String &filename, const Time &frame_time)
-    : Drawable()
-    , texture(new Texture), sprite(new Sprite)
-    , frame_time(frame_time), current_time()
-    , current_frame(0), frames()
+Animation::Animation(const Time &frame_time) 
+    : Updatable()
+    , frame_time(frame_time)
+    , current_time()
+    , current_frame(0)
+    , frames(new IntRects)
 {
-    texture->loadFromFile(filename);
-    texture->setRepeated(true);
-    sprite->setTexture(*texture);
 }
 
 Animation::~Animation()
 {
-    delete sprite;
-    delete texture;
+    delete frames;
 }
 
 void Animation::addFrame(const IntRect &frame)
 {
-    if (!frames.size()) {
-        sprite->setTextureRect(frame);
+    frames->emplace_back(frame);
+}
+
+const IntRect &Animation::getFrame() const
+{
+    if (frames->empty()) {
+        return IntRect();
     }
 
-    frames.emplace_back(frame);
+    return frames->at(current_frame);
 }
 
 void Animation::update()
 {
-    if (current_time.getElapsedTime() > frame_time) {
-        current_time.restart();
-        current_frame++;
-
-        if (current_frame > frames.size() - 1) {
-            current_frame = 0;
-        }
-
-        sprite->setTextureRect(frames.at(current_frame));
+    if (frame_time > current_time.getElapsedTime()) {
+        return;
     }
-}
 
-void Animation::draw(RenderTarget &target, RenderStates states) const
-{
-    target.draw(*sprite, states);
+    current_time.restart();
+    current_frame++;
+
+    if (current_frame >= frames->size()) {
+        current_frame = 0;
+    }
 }

@@ -15,6 +15,16 @@ Particle::~Particle()
     delete texture;
 }
 
+Texture *Particle::getTexture()
+{
+    return texture;
+}
+
+Sprite *Particle::getSprite()
+{
+    return sprite;
+}
+
 void Particle::draw(RenderTarget &target, RenderStates states) const
 {
     target.draw(*sprite, states);
