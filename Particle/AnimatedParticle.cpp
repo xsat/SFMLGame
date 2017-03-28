@@ -1,6 +1,7 @@
 #include "AnimatedParticle.h"
 
-AnimatedParticle::AnimatedParticle(const String &filename) : Particle(filename)
+AnimatedParticle::AnimatedParticle(const String &filename) 
+    : Particle(filename)
 {
 }
 

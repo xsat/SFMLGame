@@ -1,7 +1,9 @@
 #include "Particle.h"
 
-Particle::Particle(const String &filename, const IntRect &area) : Drawable(),
-    texture(new Texture()), sprite(new Sprite())
+Particle::Particle(const String &filename, const IntRect &area) 
+    : Drawable()
+    , texture(new Texture())
+    , sprite(new Sprite())
 {
     texture->loadFromFile(filename, area);
     texture->setRepeated(true);
