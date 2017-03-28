@@ -20,8 +20,8 @@ public:
 private:
     RenderWindow *window;
 
-    Input *input;
-    Ai *ai;
-    Physics *physics;
-    Graphics *graphics;
+    Component *input;
+    Component *ai;
+    Component *physics;
+    Component *graphics;
 };
