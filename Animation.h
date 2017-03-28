@@ -24,7 +24,5 @@ private:
     Clock current_time;
 
     int current_frame;
-
     IntRects *frames;
 };
-
