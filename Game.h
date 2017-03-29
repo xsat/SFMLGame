@@ -15,10 +15,10 @@ using sf::VideoMode;
 class Game
 {
 public:
-	Game();
-	~Game();
+    Game();
+    ~Game();
 
-	void start();
+    void start();
 private:
     RenderWindow *window;
 
