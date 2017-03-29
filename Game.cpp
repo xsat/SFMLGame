@@ -2,10 +2,11 @@
 
 Game::Game() 
     : window(new RenderWindow(VideoMode(800, 600), "Default title"))
+    , container(new Container())
     , input(new Input())
     , ai(new Ai())
-    , physics(new Physics())
-    , graphics(new Graphics())
+    , physics(new Physics(container))
+    , graphics(new Graphics(container))
 {
     window->setFramerateLimit(60);
 }
@@ -16,6 +17,7 @@ Game::~Game()
     delete physics;
     delete ai;
     delete input;
+    delete container;
     delete window;
 }
 

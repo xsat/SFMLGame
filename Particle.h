@@ -21,8 +21,7 @@ public:
     Particle(const String &filename, const IntRect &area = IntRect());
     virtual ~Particle();
 protected:
-    Texture *getTexture();
-    Sprite *getSprite();
+    void setRect(const IntRect &rect);
 private:
     virtual void draw(RenderTarget &target, RenderStates states) const;
 

@@ -17,14 +17,9 @@ Particle::~Particle()
     delete texture;
 }
 
-Texture *Particle::getTexture()
+void Particle::setRect(const IntRect &rect)
 {
-    return texture;
-}
-
-Sprite *Particle::getSprite()
-{
-    return sprite;
+    sprite->setTextureRect(rect);
 }
 
 void Particle::draw(RenderTarget &target, RenderStates states) const

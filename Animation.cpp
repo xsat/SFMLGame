@@ -1,7 +1,7 @@
 #include "Animation.h"
 
 Animation::Animation(const Time &frame_time) 
-    : Updatable()
+    : Process()
     , frame_time(frame_time)
     , current_time()
     , current_frame(0)

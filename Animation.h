@@ -4,12 +4,12 @@
 #include <SFML\System\Clock.hpp>
 
 #include "IntRects.h"
-#include "Updatable.h"
+#include "Process.h"
 
 using sf::Time;
 using sf::Clock;
 
-class Animation : public Updatable
+class Animation : public Process
 {
 public:
     Animation(const Time &frame_time);

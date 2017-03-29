@@ -7,6 +7,8 @@
 #include "Component/Physics.h"
 #include "Component/Graphics.h"
 
+#include "Container.h"
+
 using sf::RenderWindow;
 using sf::VideoMode;
 
@@ -19,6 +21,8 @@ public:
 	void start();
 private:
     RenderWindow *window;
+
+    Container *container;
 
     Component *input;
     Component *ai;
