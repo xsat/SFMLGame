@@ -11,8 +11,8 @@ public:
     Container();
     ~Container();
 
-    virtual Particles *getParticles();
-    virtual Processes *getProcesses();
+    virtual const Particles *getParticles() const;
+    virtual const Processes *getProcesses() const;
 private:
     Particles *particles;
     Processes *processes;

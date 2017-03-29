@@ -5,5 +5,5 @@
 class ProcessesContainer
 {
 public:
-    virtual Processes *getProcesses() = 0;
+    virtual const Processes *getProcesses() const = 0;
 };

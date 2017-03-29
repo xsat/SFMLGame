@@ -5,5 +5,5 @@
 class ParticlesContainer
 {
 public:
-    virtual Particles *getParticles() = 0;
+    virtual const Particles *getParticles() const = 0;
 };

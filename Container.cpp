@@ -15,12 +15,12 @@ Container::~Container()
     delete particles;
 }
 
-Particles *Container::getParticles()
+const Particles *Container::getParticles() const
 {
     return particles;
 }
 
-Processes *Container::getProcesses()
+const Processes *Container::getProcesses() const
 {
     return processes;
 }
