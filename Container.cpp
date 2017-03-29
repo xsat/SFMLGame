@@ -6,7 +6,7 @@ Container::Container()
     , particles(new Particles())
     , processes(new Processes())
 {
-    particles->emplace_back(new Particle("grass.png", IntRect(0, 0, 800, 600)));
+    particles->emplace_back(new Particle("grass.png", IntRect(0, 0, 800, 600))); // TODO: Check memory leak
 }
 
 Container::~Container()
