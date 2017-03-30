@@ -4,6 +4,7 @@
 #include "Container\ProcessesContainer.h"
 
 #include "Particle.h"
+#include "Particle/AnimatedParticle.h"
 
 class Container : public ParticlesContainer, public ProcessesContainer
 {

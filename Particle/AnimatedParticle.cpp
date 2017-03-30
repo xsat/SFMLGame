@@ -8,6 +8,8 @@ AnimatedParticle::AnimatedParticle(const String &filename, const Time &frame_tim
     for (IntRect frame : frames) {
         animation->addFrame(frame);
     }
+
+    setRect(animation->getFrame());
 }
 
 AnimatedParticle::~AnimatedParticle()
