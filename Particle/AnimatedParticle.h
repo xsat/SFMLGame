@@ -7,7 +7,9 @@
 class AnimatedParticle : public Particle, public Process
 {
 public:
-    AnimatedParticle(const String &filename, const Time &frame_time, const IntRects &frames);
+    AnimatedParticle(const String &filename, 
+                     const Time &frame_time, 
+                     const IntRects &frames);
     virtual ~AnimatedParticle();
 
     virtual void update();

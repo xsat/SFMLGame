@@ -18,12 +18,14 @@ using sf::Sprite;
 class Particle : public Drawable
 {
 public:
-    Particle(const String &filename, const IntRect &area = IntRect());
+    Particle(const String &filename, 
+             const IntRect &area = IntRect());
     virtual ~Particle();
 protected:
     void setRect(const IntRect &rect);
 private:
-    virtual void draw(RenderTarget &target, RenderStates states) const;
+    virtual void draw(RenderTarget &target, 
+                      RenderStates states) const;
 
     Texture *texture;
     Sprite *sprite;
