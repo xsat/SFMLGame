@@ -2,7 +2,7 @@
 
 PhysicsComponent::PhysicsComponent(ProcessesContainer *container)
     : GameComponent()
-    , container(container)
+    , container_(container)
 {
 }
 
@@ -12,7 +12,7 @@ PhysicsComponent::~PhysicsComponent()
 
 void PhysicsComponent::update(RenderWindow *window)
 {
-    for (Process *process : *container->getProcesses()) {
+    for (Process *process : *container_->getProcesses()) {
         process->update();
     }
 }

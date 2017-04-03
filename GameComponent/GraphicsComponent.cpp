@@ -2,7 +2,7 @@
 
 GraphicsComponent::GraphicsComponent(ParticlesContainer *container)
     : GameComponent()
-    , container(container)
+    , container_(container)
 {
 }
 
@@ -14,7 +14,7 @@ void GraphicsComponent::update(RenderWindow *window)
 {
     window->clear();
 
-    for (Drawable *drawable : *container->getParticles()) {
+    for (Drawable *drawable : *container_->getParticles()) {
         window->draw(*drawable);
     }
 

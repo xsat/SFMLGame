@@ -3,27 +3,27 @@
 Particle::Particle(const String &filename, 
                    const IntRect &area) 
     : Drawable()
-    , texture(new Texture())
-    , sprite(new Sprite())
+    , texture_(new Texture())
+    , sprite_(new Sprite())
 {
-    texture->loadFromFile(filename, area);
-    texture->setRepeated(true);
-    sprite->setTexture(*texture);
-    sprite->setTextureRect(area);
+    texture_->loadFromFile(filename, area);
+    texture_->setRepeated(true);
+    sprite_->setTexture(*texture_);
+    sprite_->setTextureRect(area);
 }
 
 Particle::~Particle()
 {
-    delete sprite;
-    delete texture;
+    delete sprite_;
+    delete texture_;
 }
 
 void Particle::setRect(const IntRect &rect)
 {
-    sprite->setTextureRect(rect);
+    sprite_->setTextureRect(rect);
 }
 
 void Particle::draw(RenderTarget &target, RenderStates states) const
 {
-    target.draw(*sprite, states);
+    target.draw(*sprite_, states);
 }

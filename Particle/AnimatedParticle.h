@@ -14,5 +14,5 @@ public:
 
     virtual void update();
 private:
-    Animation *animation;
+    Animation *animation_;
 };

@@ -11,5 +11,5 @@ public:
 
     virtual void update(RenderWindow *window);
 private:
-    ParticlesContainer *container;
+    ParticlesContainer *container_;
 };

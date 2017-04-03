@@ -20,9 +20,9 @@ public:
 
     virtual void update();
 private:
-    Time frame_time;
-    Clock current_time;
+    Time frame_time_;
+    Clock current_time_;
 
-    int current_frame;
-    IntRects *frames;
+    int current_frame_;
+    IntRects *frames_;
 };

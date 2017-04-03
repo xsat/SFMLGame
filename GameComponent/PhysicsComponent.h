@@ -11,5 +11,5 @@ public:
 
     virtual void update(RenderWindow *window);
 private:
-    ProcessesContainer *container;
+    ProcessesContainer *container_;
 };

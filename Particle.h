@@ -27,6 +27,6 @@ private:
     virtual void draw(RenderTarget &target, 
                       RenderStates states) const;
 
-    Texture *texture;
-    Sprite *sprite;
+    Texture *texture_;
+    Sprite *sprite_;
 };

@@ -1,33 +1,33 @@
 #include "Game.h"
 
 Game::Game() 
-    : window(new RenderWindow(VideoMode(800, 600), "Default title"))
-    , container(new Container())
-    , input(new InputComponent())
-    , ai(new AiComponent())
-    , physics(new PhysicsComponent(container))
-    , graphics(new GraphicsComponent(container))
+    : window_(new RenderWindow(VideoMode(800, 600), "Default title"))
+    , container_(new Container())
+    , input_(new InputComponent())
+    , ai_(new AiComponent())
+    , physics_(new PhysicsComponent(container_))
+    , graphics_(new GraphicsComponent(container_))
 {
-    window->setFramerateLimit(60);
+    window_->setFramerateLimit(60);
 }
 
 Game::~Game()
 {
-    delete graphics;
-    delete physics;
-    delete ai;
-    delete input;
-    delete container;
-    delete window;
+    delete graphics_;
+    delete physics_;
+    delete ai_;
+    delete input_;
+    delete container_;
+    delete window_;
 }
 
 void Game::start()
 {
-    while (window->isOpen()) {
-        input->update(window);
-        window->clear();
-        ai->update(window);
-        physics->update(window);
-        graphics->update(window);
+    while (window_->isOpen()) {
+        input_->update(window_);
+        window_->clear();
+        ai_->update(window_);
+        physics_->update(window_);
+        graphics_->update(window_);
     }
 }

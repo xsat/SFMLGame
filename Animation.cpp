@@ -2,42 +2,42 @@
 
 Animation::Animation(const Time &frame_time) 
     : Process()
-    , frame_time(frame_time)
-    , current_time()
-    , current_frame(0)
-    , frames(new IntRects)
+    , frame_time_(frame_time)
+    , current_time_()
+    , current_frame_(0)
+    , frames_(new IntRects)
 {
 }
 
 Animation::~Animation()
 {
-    delete frames;
+    delete frames_;
 }
 
 void Animation::addFrame(const IntRect &frame)
 {
-    frames->emplace_back(frame);
+    frames_->emplace_back(frame);
 }
 
 const IntRect &Animation::getFrame() const
 {
-    if (frames->empty()) {
+    if (frames_->empty()) {
         return IntRect();
     }
 
-    return frames->at(current_frame);
+    return frames_->at(current_frame_);
 }
 
 void Animation::update()
 {
-    if (frame_time > current_time.getElapsedTime()) {
+    if (frame_time_ > current_time_.getElapsedTime()) {
         return;
     }
 
-    current_time.restart();
-    current_frame++;
+    current_time_.restart();
+    current_frame_++;
 
-    if (current_frame >= frames->size()) {
-        current_frame = 0;
+    if (current_frame_ >= frames_->size()) {
+        current_frame_ = 0;
     }
 }

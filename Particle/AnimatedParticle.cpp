@@ -5,22 +5,22 @@ AnimatedParticle::AnimatedParticle(const String &filename,
                                    const IntRects &frames)
     : Particle(filename)
     , Process()
-    , animation(new Animation(frame_time))
+    , animation_(new Animation(frame_time))
 {
     for (IntRect frame : frames) {
-        animation->addFrame(frame);
+        animation_->addFrame(frame);
     }
 
-    setRect(animation->getFrame());
+    setRect(animation_->getFrame());
 }
 
 AnimatedParticle::~AnimatedParticle()
 {
-    delete animation;
+    delete animation_;
 }
 
 void AnimatedParticle::update()
 {
-    animation->update();
-    setRect(animation->getFrame());
+    animation_->update();
+    setRect(animation_->getFrame());
 }

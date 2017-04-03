@@ -20,12 +20,12 @@ public:
 
     void start();
 private:
-    RenderWindow *window;
+    RenderWindow *window_;
 
-    Container *container;
+    Container *container_;
 
-    GameComponent *input;
-    GameComponent *ai;
-    GameComponent *physics;
-    GameComponent *graphics;
+    GameComponent *input_;
+    GameComponent *ai_;
+    GameComponent *physics_;
+    GameComponent *graphics_;
 };
