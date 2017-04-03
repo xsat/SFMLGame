@@ -1,14 +1,11 @@
 #pragma once
 
-#include "../Component.h"
+#include "../GameComponent.h"
 
 using sf::Event;
 
-class Input : public Component
+class InputComponent : public GameComponent
 {
 public:
-    Input();
-    ~Input();
-
     virtual void update(RenderWindow *window);
 };

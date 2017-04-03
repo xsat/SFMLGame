@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../Component.h"
+#include "../GameComponent.h"
 #include "../Container/ProcessesContainer.h"
 
-class Physics : public Component
+class PhysicsComponent : public GameComponent
 {
 public:
-    Physics(ProcessesContainer *container);
-    ~Physics();
+    PhysicsComponent(ProcessesContainer *container);
+    ~PhysicsComponent();
 
     virtual void update(RenderWindow *window);
 private:

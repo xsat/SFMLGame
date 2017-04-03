@@ -1,12 +1,9 @@
 #pragma once
 
-#include "../Component.h"
+#include "../GameComponent.h"
 
-class Ai : public Component
+class AiComponent : public GameComponent
 {
 public:
-	Ai();
-	~Ai();
-
     virtual void update(RenderWindow *window);
 };

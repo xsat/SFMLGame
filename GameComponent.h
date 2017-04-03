@@ -4,7 +4,7 @@
 
 using sf::RenderWindow;
 
-class Component
+class GameComponent
 {
 public:
     virtual void update(RenderWindow *window) = 0;

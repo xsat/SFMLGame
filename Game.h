@@ -2,10 +2,10 @@
 
 #include <SFML/Graphics.hpp>
 
-#include "Component/Input.h"
-#include "Component/Ai.h"
-#include "Component/Physics.h"
-#include "Component/Graphics.h"
+#include "GameComponent/InputComponent.h"
+#include "GameComponent/AiComponent.h"
+#include "GameComponent/PhysicsComponent.h"
+#include "GameComponent/GraphicsComponent.h"
 
 #include "Container.h"
 
@@ -24,8 +24,8 @@ private:
 
     Container *container;
 
-    Component *input;
-    Component *ai;
-    Component *physics;
-    Component *graphics;
+    GameComponent *input;
+    GameComponent *ai;
+    GameComponent *physics;
+    GameComponent *graphics;
 };

@@ -3,10 +3,10 @@
 Game::Game() 
     : window(new RenderWindow(VideoMode(800, 600), "Default title"))
     , container(new Container())
-    , input(new Input())
-    , ai(new Ai())
-    , physics(new Physics(container))
-    , graphics(new Graphics(container))
+    , input(new InputComponent())
+    , ai(new AiComponent())
+    , physics(new PhysicsComponent(container))
+    , graphics(new GraphicsComponent(container))
 {
     window->setFramerateLimit(60);
 }

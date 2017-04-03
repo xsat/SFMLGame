@@ -1,14 +1,6 @@
-#include "Input.h"
+#include "InputComponent.h"
 
-Input::Input()
-{
-}
-
-Input::~Input()
-{
-}
-
-void Input::update(RenderWindow *window)
+void InputComponent::update(RenderWindow *window)
 {
     Event event;
 
