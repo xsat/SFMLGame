@@ -18,4 +18,3 @@ private:
     Particles *particles_;
     Processes *processes_;
 };
-

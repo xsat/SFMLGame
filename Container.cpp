@@ -7,7 +7,7 @@ Container::Container()
     , processes_(new Processes())
 {
     particles_->emplace_back(new Particle("grass.png",
-                            IntRect(0, 0, 800, 600))); // TODO(Xsaat): Check memory leak
+                            IntRect(0, 0, 800, 600))); // TODO(Xsat): Check memory leak
 
     AnimatedParticle *grass2 = 
         new AnimatedParticle("grass2.png",  sf::seconds(0.5), { 
